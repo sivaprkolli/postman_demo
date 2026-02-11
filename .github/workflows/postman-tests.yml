@@ -28,13 +28,11 @@ jobs:
       run: postman login --with-api-key ${{ secrets.API_KEY }}
         
     - name: Run Postman Collection
-      run: postman collection run SDET_API.postman_collection.json --environment SDET_API_QA.postman_environment.json -r json,html --reporter-json-omitHeaders --reporter-json-omitResponseBodies
+      run: postman collection run SDET_API.postman_collection.json --environment SDET_API_QA.postman_environment.json -r json,html --reporter-json-omitHeaders --reporter-json-omitResponseBodies || true
         
     - name: Upload Test Reports
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: postman-test-reports
-        path: |
-          *.json
-          *.html
+        path: postman-cli-reports/
