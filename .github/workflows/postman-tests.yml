@@ -7,6 +7,11 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   api-tests:
     runs-on: ubuntu-latest
@@ -36,3 +41,24 @@ jobs:
       with:
         name: postman-test-reports
         path: postman-cli-reports/
+        
+    - name: Setup Pages
+      if: always()
+      uses: actions/configure-pages@v4
+      
+    - name: Upload artifact to Pages
+      if: always()
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: postman-cli-reports/
+        
+    - name: Deploy to GitHub Pages
+      if: always()
+      id: deployment
+      uses: actions/deploy-pages@v4
+      
+    - name: Add Report URL to Summary
+      if: always()
+      run: |
+        echo "## Test Report Published! 📊" >> $GITHUB_STEP_SUMMARY
+        echo "View the HTML report at: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
