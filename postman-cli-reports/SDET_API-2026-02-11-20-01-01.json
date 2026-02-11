@@ -1,0 +1,569 @@
+{
+  "run": {
+    "meta": {
+      "collectionId": "11f1a2cc-16f2-464a-a48c-c3a95f956ae0",
+      "collectionName": "SDET_API",
+      "started": 1770820253141,
+      "duration": null
+    },
+    "summary": {
+      "iterations": {
+        "executed": 1,
+        "errors": 0
+      },
+      "executedRequests": {
+        "executed": 11,
+        "errors": 0
+      },
+      "prerequestScripts": {
+        "executed": 0,
+        "errors": 0
+      },
+      "postresponseScripts": {
+        "executed": 10,
+        "errors": 0
+      },
+      "tests": {
+        "executed": 12,
+        "failed": 1,
+        "passed": 11,
+        "skipped": 0
+      },
+      "timeStats": {
+        "responseAverage": 667.9090909090909,
+        "responseMin": 266,
+        "responseMax": 891,
+        "responseStandardDeviation": 145.3644038867679
+      }
+    },
+    "executions": [
+      {
+        "iterationCount": 0,
+        "requestExecuted": {
+          "id": "197d9b17-c408-4380-88dc-370a27b2ed2c",
+          "name": "VerifyStatus",
+          "url": {
+            "protocol": "https",
+            "path": [
+              "status"
+            ],
+            "host": [
+              "simple-grocery-store-api",
+              "click"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": {
+          "id": "5bb49f13-f1b4-40f3-be12-b25cd9398213",
+          "_details": {
+            "name": "OK",
+            "detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.",
+            "code": 200,
+            "standardName": "OK"
+          },
+          "status": "OK",
+          "code": 200,
+          "cookies": [],
+          "responseTime": 891,
+          "responseSize": 15,
+          "downloadedBytes": 15
+        },
+        "tests": [
+          {
+            "name": "Status code is 200",
+            "status": "passed"
+          },
+          {
+            "name": "Verify status value",
+            "status": "passed"
+          }
+        ],
+        "errors": []
+      },
+      {
+        "iterationCount": 0,
+        "requestExecuted": {
+          "id": "a3141298-a029-480e-a7b8-e8f6e6a73798",
+          "name": "SaveProducts",
+          "url": {
+            "protocol": "https",
+            "path": [
+              "products"
+            ],
+            "host": [
+              "simple-grocery-store-api",
+              "click"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": {
+          "id": "aef8900b-ec7b-4555-82a7-7391ea920ab2",
+          "_details": {
+            "name": "OK",
+            "detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.",
+            "code": 200,
+            "standardName": "OK"
+          },
+          "status": "OK",
+          "code": 200,
+          "cookies": [],
+          "responseTime": 266,
+          "responseSize": 1725,
+          "downloadedBytes": 1725
+        },
+        "tests": [
+          {
+            "name": "Status code is 200",
+            "status": "passed"
+          }
+        ],
+        "errors": []
+      },
+      {
+        "iterationCount": 0,
+        "requestExecuted": {
+          "id": "13b63b5d-2ae9-435a-8ef6-4aaab9dd71d0",
+          "name": "GetProductDetails",
+          "url": {
+            "protocol": "https",
+            "path": [
+              "products",
+              "1225"
+            ],
+            "host": [
+              "simple-grocery-store-api",
+              "click"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": {
+          "id": "52277634-65f8-4c96-a86f-89ce99594e9f",
+          "_details": {
+            "name": "OK",
+            "detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.",
+            "code": 200,
+            "standardName": "OK"
+          },
+          "status": "OK",
+          "code": 200,
+          "cookies": [],
+          "responseTime": 651,
+          "responseSize": 149,
+          "downloadedBytes": 149
+        },
+        "tests": [
+          {
+            "name": "Status code is 200",
+            "status": "passed"
+          }
+        ],
+        "errors": []
+      },
+      {
+        "iterationCount": 0,
+        "requestExecuted": {
+          "id": "3c92df68-835d-4244-9672-78a5e2b01460",
+          "name": "CreateACart",
+          "url": {
+            "protocol": "https",
+            "path": [
+              "carts"
+            ],
+            "host": [
+              "simple-grocery-store-api",
+              "click"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "POST"
+        },
+        "response": {
+          "id": "caaad9b7-157c-4b0f-9ddf-678d636031e1",
+          "_details": {
+            "name": "Created",
+            "detail": "The request has been fulfilled and resulted in a new resource being created.",
+            "code": 201,
+            "standardName": "Created"
+          },
+          "status": "Created",
+          "code": 201,
+          "cookies": [],
+          "responseTime": 643,
+          "responseSize": 49,
+          "downloadedBytes": 49
+        },
+        "tests": [
+          {
+            "name": "Verify cart is created",
+            "status": "passed"
+          },
+          {
+            "name": "Veirfy 201 status",
+            "status": "passed"
+          }
+        ],
+        "errors": []
+      },
+      {
+        "iterationCount": 0,
+        "requestExecuted": {
+          "id": "d2dfff08-f050-4735-b8d4-97d75e9068e6",
+          "name": "AddProductToCart",
+          "url": {
+            "protocol": "https",
+            "path": [
+              "carts",
+              "NRuYxwuXtq_pABK1kECUX",
+              "items"
+            ],
+            "host": [
+              "simple-grocery-store-api",
+              "click"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n   \"productId\": 1709,\r\n   \"quantity\": 10\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "052cc0c5-3ff2-4396-af3f-a4ac0e1ad8b7",
+          "_details": {
+            "name": "Created",
+            "detail": "The request has been fulfilled and resulted in a new resource being created.",
+            "code": 201,
+            "standardName": "Created"
+          },
+          "status": "Created",
+          "code": 201,
+          "cookies": [],
+          "responseTime": 771,
+          "responseSize": 35,
+          "downloadedBytes": 35
+        },
+        "tests": [
+          {
+            "name": "Status code is 201",
+            "status": "passed"
+          }
+        ],
+        "errors": []
+      },
+      {
+        "iterationCount": 0,
+        "requestExecuted": {
+          "id": "608f4cad-b308-4da4-8e76-cce315104843",
+          "name": "UpdateProductToCart",
+          "url": {
+            "protocol": "https",
+            "path": [
+              "carts",
+              "NRuYxwuXtq_pABK1kECUX",
+              "items",
+              "1225"
+            ],
+            "host": [
+              "simple-grocery-store-api",
+              "click"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "PUT",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n   \"productId\": 1709,\r\n   \"quantity\": 100\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "f2769f9f-a58a-42d1-bb3d-534f2ddf8a89",
+          "_details": {
+            "name": "Not Found",
+            "detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible.",
+            "code": 404,
+            "standardName": "Not Found"
+          },
+          "status": "Not Found",
+          "code": 404,
+          "cookies": [],
+          "responseTime": 642,
+          "responseSize": 46,
+          "downloadedBytes": 46
+        },
+        "tests": [
+          {
+            "name": "Status code is 201",
+            "error": {
+              "name": "AssertionError",
+              "index": 0,
+              "test": "Status code is 201",
+              "message": "expected response to have status code 201 but got 404",
+              "stack": "AssertionError: expected response to have status code 201 but got 404\n   at Object.eval sandbox-script.js:1:6)"
+            },
+            "status": "failed"
+          }
+        ],
+        "errors": []
+      },
+      {
+        "iterationCount": 0,
+        "requestExecuted": {
+          "id": "359fbe6f-6217-43f5-b476-24d92c0eb046",
+          "name": "GetCart",
+          "url": {
+            "protocol": "https",
+            "path": [
+              "carts",
+              "NRuYxwuXtq_pABK1kECUX"
+            ],
+            "host": [
+              "simple-grocery-store-api",
+              "click"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": {
+          "id": "63f8b2ec-1fed-4e6b-a5d4-a71c614d8b79",
+          "_details": {
+            "name": "OK",
+            "detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.",
+            "code": 200,
+            "standardName": "OK"
+          },
+          "status": "OK",
+          "code": 200,
+          "cookies": [],
+          "responseTime": 730,
+          "responseSize": 96,
+          "downloadedBytes": 96
+        },
+        "tests": [
+          {
+            "name": "Status code is 200",
+            "status": "passed"
+          }
+        ],
+        "errors": []
+      },
+      {
+        "iterationCount": 0,
+        "requestExecuted": {
+          "id": "ef74f8d3-d9f6-47a6-a803-75b423f1e983",
+          "name": "CreateToken",
+          "url": {
+            "protocol": "https",
+            "path": [
+              "api-clients"
+            ],
+            "host": [
+              "simple-grocery-store-api",
+              "click"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n   \"clientName\": \"Jeannie Heaney III\",\r\n   \"clientEmail\": \"usb_tennessee_mcdonald.fig@yopmail.com\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "8be97d60-c99a-4e1e-9f3a-5996ed1e92fb",
+          "_details": {
+            "name": "Created",
+            "detail": "The request has been fulfilled and resulted in a new resource being created.",
+            "code": 201,
+            "standardName": "Created"
+          },
+          "status": "Created",
+          "code": 201,
+          "cookies": [],
+          "responseTime": 729,
+          "responseSize": 82,
+          "downloadedBytes": 82
+        },
+        "tests": [
+          {
+            "name": "Status code is 201",
+            "status": "passed"
+          }
+        ],
+        "errors": []
+      },
+      {
+        "iterationCount": 0,
+        "requestExecuted": {
+          "id": "0d64f535-d6dc-4e58-ad7d-56487570dab8",
+          "name": "CreateAnOrder",
+          "url": {
+            "protocol": "https",
+            "path": [
+              "orders"
+            ],
+            "host": [
+              "simple-grocery-store-api",
+              "click"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n    \"cartId\": \"NRuYxwuXtq_pABK1kECUX\",\r\n    \"customerName\": \"John Doe\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "49c70393-3756-4493-9930-a0bc1c550b7d",
+          "_details": {
+            "name": "Created",
+            "detail": "The request has been fulfilled and resulted in a new resource being created.",
+            "code": 201,
+            "standardName": "Created"
+          },
+          "status": "Created",
+          "code": 201,
+          "cookies": [],
+          "responseTime": 662,
+          "responseSize": 50,
+          "downloadedBytes": 50
+        },
+        "tests": [
+          {
+            "name": "Status code is 201",
+            "status": "passed"
+          }
+        ],
+        "errors": []
+      },
+      {
+        "iterationCount": 0,
+        "requestExecuted": {
+          "id": "ac7ef73f-2b1e-47a1-bd3c-9be24dc82949",
+          "name": "GetOrderDetails",
+          "url": {
+            "protocol": "https",
+            "path": [
+              "orders",
+              "WaYeHDx1CQ6Kn6LOTzKN8"
+            ],
+            "host": [
+              "simple-grocery-store-api",
+              "click"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": {
+          "id": "f6a76ffc-7b5d-4e4c-97fa-e7bf1503174b",
+          "_details": {
+            "name": "OK",
+            "detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action.",
+            "code": 200,
+            "standardName": "OK"
+          },
+          "status": "OK",
+          "code": 200,
+          "cookies": [],
+          "responseTime": 703,
+          "responseSize": 164,
+          "downloadedBytes": 164
+        },
+        "tests": [],
+        "errors": []
+      },
+      {
+        "iterationCount": 0,
+        "requestExecuted": {
+          "id": "f0ce90b0-cf0b-4d83-b4e4-1295d8c8a469",
+          "name": "UpdateOder",
+          "url": {
+            "protocol": "https",
+            "path": [
+              "orders",
+              "WaYeHDx1CQ6Kn6LOTzKN8"
+            ],
+            "host": [
+              "simple-grocery-store-api",
+              "click"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "PATCH",
+          "body": {
+            "mode": "raw",
+            "raw": "{\r\n    \"comment\": \"Please provide gift pack for the order\"\r\n}",
+            "options": {
+              "raw": {
+                "language": "json"
+              }
+            }
+          }
+        },
+        "response": {
+          "id": "45522f81-2124-4034-96d9-40487f2d6d87",
+          "_details": {
+            "name": "No Content",
+            "detail": "The server successfully processed the request, but is not returning any content.",
+            "code": 204,
+            "standardName": "No Content"
+          },
+          "status": "No Content",
+          "code": 204,
+          "cookies": [],
+          "responseTime": 659,
+          "responseSize": 0,
+          "downloadedBytes": 0
+        },
+        "tests": [
+          {
+            "name": "Status code is 204",
+            "status": "passed"
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "runError": null
+  }
+}

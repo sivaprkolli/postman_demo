@@ -20,18 +20,21 @@ jobs:
       with:
         node-version: '18'
         
-    - name: Install Newman and HTML Extra Reporter
+    - name: Install Postman CLI
       run: |
-        npm install -g newman
-        npm install -g newman-reporter-htmlextra
+        curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+        
+    - name: Login to Postman CLI
+      run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
         
     - name: Run Postman Collection
-      run: |
-        newman run SDET_API.postman_collection.json --environment SDET_API_QA.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export testResults/htmlReport.html
+      run: postman collection run SDET_API.postman_collection.json --environment SDET_API_QA.postman_environment.json -r json,html --reporter-json-omitHeaders --reporter-json-omitResponseBodies
         
-    - name: Upload Test Results
+    - name: Upload Test Reports
       if: always()
       uses: actions/upload-artifact@v4
       with:
-        name: postman-test-results
-        path: testResults/
+        name: postman-test-reports
+        path: |
+          *.json
+          *.html
