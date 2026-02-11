@@ -38,7 +38,8 @@ jobs:
     - name: Prepare HTML Report for GitHub Pages
       if: always()
       run: |
-        cp postman-cli-reports/*.html postman-cli-reports/index.html
+        cd postman-cli-reports
+        cp $(ls *.html | head -n 1) index.html
         
     - name: Upload Test Reports
       if: always()
