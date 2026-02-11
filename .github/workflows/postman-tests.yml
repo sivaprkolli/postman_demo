@@ -25,7 +25,7 @@ jobs:
         curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
         
     - name: Login to Postman CLI
-      run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
+      run: postman login --with-api-key ${{ secrets.API_KEY }}
         
     - name: Run Postman Collection
       run: postman collection run SDET_API.postman_collection.json --environment SDET_API_QA.postman_environment.json -r json,html --reporter-json-omitHeaders --reporter-json-omitResponseBodies
